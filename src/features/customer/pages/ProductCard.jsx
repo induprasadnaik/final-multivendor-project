@@ -150,11 +150,16 @@ const decreaseQty = (e) => {
     Add to Cart
   </button>
         ) : (
+          <>
    <div className="flex items-center justify-between border rounded-xl overflow-hidden">
     <button onClick={decreaseQty} className="flex-1 py-2 bg-red-100">−</button>
     <span className="w-12 text-center font-semibold">{qty}</span>
     <button onClick={increaseQty} className="flex-1 py-2 bg-green-100">+</button>
   </div>
+<button onClick={() => navigate('/customer/product/cart')} className="w-full bg-(--dark-teal) text-white py-2 rounded-lg mt-3">
+    View Cart
+  </button>
+</>
 
         )}
       </div>

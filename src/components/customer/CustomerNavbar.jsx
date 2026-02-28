@@ -51,7 +51,7 @@ function CustomerNavbar() {
   return (
     <>
       {/* navbar */}
-      <nav className="fixed top-0 w-full z-50 shadow-md bg-(--dark-teal) text-white">
+      <nav className="fixed top-0 w-full z-50 shadow-md bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
 
           {/* logo */}

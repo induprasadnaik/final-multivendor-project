@@ -41,7 +41,7 @@ socket.on("orderStatusUpdated", handleUpdate);
     <div className="p-4 bg-gray-100 min-h-screen">
      <div className="fixed top-0 left-0 w-full bg-white z-50 shadow-sm">
        <div className="relative flex items-center justify-center h-14 px-4">
-     
+
          {/* Back Button (absolute so it doesn’t affect centering) */}
          <button
            onClick={() => navigate(-1)}
@@ -49,8 +49,8 @@ socket.on("orderStatusUpdated", handleUpdate);
          >
            <ArrowLeftIcon className="w-6 h-6" />
          </button>
-     
-        
+
+
        </div>
      </div>
       <h1 className="text-xl font-bold mb-4 mt-14">My Orders</h1>

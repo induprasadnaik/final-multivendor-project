@@ -85,7 +85,7 @@ function CartPage() {
       </div>
       {/* Back Button */}
       <button
-        onClick={() => navigate("/customer")}
+        onClick={() => navigate("/")}
         className="fixed top-2 left-4 z-50 bg-white shadow-md rounded-full p-2 hover:bg-gray-100"
       >
         <ArrowLeftIcon className="w-6 h-6 text-gray-700" />

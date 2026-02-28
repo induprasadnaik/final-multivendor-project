@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 import {useAuth } from '../../../components/context/AuthContext'
 import api from '../../../api'
+import { clearCart } from "../../../redux/cartSlice";
 
 function PaymentPage() {
   const navigate = useNavigate();
@@ -97,10 +98,10 @@ subTotal: checkoutType === "cart"
     pincode: cart.deliveryAddress?.pincode,
     mobile: cart.mobile
   },
- 
- 
+
+
 };
-  //////payment 
+  //////payment
 const handlePayment = async () => {
   try{
     if (!cart.deliveryAddress) {
@@ -133,6 +134,7 @@ if (!cart.items.length) {
         orderData: orderPayload,
       });
       showSuccess();
+dispatch(clearCart());
     },
   };
 
@@ -152,7 +154,7 @@ return (
       {/* HEADER */}
       <div className="fixed top-0 left-0 w-full bg-white z-50 shadow-sm">
         <div className="relative flex items-center justify-center h-14 px-4">
-          
+
           {/* Back Button */}
           <button
             onClick={() => navigate(-1)}
@@ -165,16 +167,23 @@ return (
           <div className="flex items-center gap-2 text-sm font-semibold">
             <div className="flex items-center gap-2 text-gray-400">
               <div className="w-7 h-7 flex items-center justify-center rounded-full bg-gray-300 text-white">1</div>
+              <span>Cart</span>
+            </div>
+            <div className="w-16 h-0.5 bg-[rgb(1,135,144)]"></div>
+
+            <div className="flex items-center gap-2 text-gray-400">
+              <div className="w-7 h-7 flex items-center justify-center rounded-full bg-gray-300 text-white">2</div>
               <span>Review</span>
             </div>
 
             <div className="w-16 h-0.5 bg-[rgb(1,135,144)]"></div>
 
             <div className="flex items-center gap-2 text-[rgb(1,135,144)]">
-              <div className="w-7 h-7 flex items-center justify-center rounded-full bg-[rgb(1,135,144)] text-white">2</div>
+              <div className="w-7 h-7 flex items-center justify-center rounded-full bg-[rgb(1,135,144)] text-white">3</div>
               <span>Payment</span>
             </div>
           </div>
+
         </div>
       </div>
 
@@ -227,7 +236,7 @@ return (
       <div className="fixed bottom-0 left-0 w-full bg-white border-t shadow-md p-4 flex justify-between items-center">
         <p className="text-xl font-bold">₹{amount.toFixed(2)}</p>
         <button onClick={handlePayment} className="bg-[rgb(1,135,144)] text-white cursor-pointer px-6 py-2 rounded-lg font-semibold shadow">
-          Pay Now
+          Place Order
         </button>
       </div>
       {/* popup */}

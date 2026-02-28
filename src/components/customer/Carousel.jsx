@@ -5,10 +5,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const banners = [
-  { id: 1, img: "/banner/elctronics.jpg", title: "Up to 50% OFF Kids Items" },
-  { id: 2, img: "/banner/clothing.jpg", title: "Flat 50% OFF Fashion" },
-  { id: 3, img: "/banner/shoes.jpg", title: "Flat 40% OFF Shoes" },
-  { id: 4, img: "/banner/cosmetics.jpg", title: "Beauty Sale Up to 60% OFF" },
+  { id: 1, img: "/banner/kiddiesbanner1.jpg", title: "Up to 50% OFF Kids Items" },
+  { id: 2, img: "/banner/kiddiesbanner2.jpg", title: "Flat 50% OFF Fashion" },
+  { id: 3, img: "/banner/kiddiesbanner1.jpg", title: "Flat 40% OFF Shoes" },
+  { id: 4, img: "/banner/kiddiesbanner2.jpg", title: "Beauty Sale Up to 60% OFF" },
 ];
 
 function Carousel() {
